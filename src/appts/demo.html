@@ -1,0 +1,31 @@
+
+
+
+<md-canvas class="ls-scheduler-day-vertical">
+    <md-toolbar class="md-accent md-hue-3" layout="column">
+        <md-button flex class="ls-quarter-hour" ng-repeat="q in quarters track by $index" ng-class="q.css" aria-label="{{q.tooltip}}">
+        {{q.tooltip}}</md-button>
+    </md-toolbar>
+</md-canvas>
+
+
+
+
+<md-canvas class="ls-horz-day" layout="column">
+    <md-toolbar class="md-accent md-hue-3" layout="row">
+        <md-button flex class="ls-hour" ng-repeat="hour in hours">{{hour}}</md-button>
+    </md-toolbar>
+    <md-toolbar class="md-warn" layout="row">
+        <md-button flex class="ls-quarter-hour" ng-repeat="q in quarters track by $index" ng-class="q.css" aria-label="{{q.label}}">
+        <md-tooltip>
+          {{q.label}}
+        </md-tooltip></md-button>
+    </md-toolbar>
+    <md-toolbar class="ls-appt md-tall md-warn md-hue-2" ng-class="appt.cssClass" layout="row" layout-align="start center">
+        <div>
+            <h2>{{appointment.title}}</h2>
+            <p>{{appointment.status}}</p>
+        </div>
+    </md-toolbar>
+</md-canvas>
+

@@ -1,0 +1,23 @@
+﻿.ls-menu {
+    list-style: none;
+    padding: 0;
+}
+.ls-menu li {
+    padding: 3px;
+    cursor: pointer;
+}
+.ls-menu li .ls-submenu {
+    padding: 0 0 0 24px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #fff;
+    width: 100%;
+    overflow: hidden;
+}
+.ls-menu .ls-menu-item .ls-submenu .ls-submenu-item {} .ls-menu li .ls-submenu.ng-hide-add {
+    -webkit-animation: 0.5s slideInUp ease;
+    animation: 0.5s slideInUp ease;
+}
+.ls-menu li .ls-submenu.ng-hide-remove {
+    -webkit-animation: 0.5s slideOutDown ease;
+    animation: 0.5s slideOutDown ease;
+}

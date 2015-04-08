@@ -1,0 +1,25 @@
+.ls-project-summary {
+  position: relative;
+  width:  100%;
+  height: 144px;
+  text-align: left;
+}
+.ls-project-summary .ls-date{
+  width:  100%;
+  position: absolute;
+  bottom: 16px;
+  font-size: 0.85714285714286em;
+}
+.ls-project-summary  .ls-code{
+  width:  100%;
+  position: absolute;
+}
+.ls-project-summary .ls-name{
+  width:  100%;
+  position: absolute;
+  font-size: 1.35em;
+  line-height:  1em;
+  font-weight: 300;
+  top: 20px;
+  text-align: center;
+}

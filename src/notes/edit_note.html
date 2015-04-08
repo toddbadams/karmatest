@@ -1,0 +1,33 @@
+﻿<md-item class="ls-appointment-note">
+    <md-item-content class="edit-note">
+        <div class="md-tile-content">
+            <form name="noteForm">
+                <md-input-container>
+                    <label>Description</label>
+                    <textarea ng-model="ngModel.$modelValue.editNote" name="editNote" required columns="1" md-maxlength="512" style="width: 100%;"></textarea>
+                    <div ng-messages="noteForm.editNote.$error">
+                        <div ng-message="required">The note description is required.</div>
+                        <div ng-message="md-maxlength">Please shorten your note description.</div>
+                    </div>
+                </md-input-container>
+            </form>
+        </div>
+        <div class="md-tile-right ls-action-menu" style="width: 180px;">
+            <md-list layout="row" layout-align="center center" style="height:100%;">
+                <md-item ng-show="!updating">
+                    <md-button aria-label="click to cancel" ng-click="cancel()" class="md-warn">
+                        <span>cancel</span>
+                    </md-button>
+                </md-item>
+                <md-item ng-show="!updating">
+                    <md-button aria-label="click to save changes" ng-click="save()" ng-disabled="noteForm.$invalid" class="md-primary">
+                        <span>done</span>
+                    </md-button>
+                </md-item>
+                <md-item ng-show="updating">
+                    <md-progress-circular md-diameter="24" md-mode="indeterminate"></md-progress-circular>
+                </md-item>
+            </md-list>
+        </div>
+    </md-item-content>
+</md-item>

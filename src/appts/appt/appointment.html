@@ -1,0 +1,15 @@
+﻿<md-card layout="row" layout-fill class="ls-appointment">
+    <div layout="column" class="appointment-menu">
+        <md-button ls-show-btn="detail" ls-group="appointment-menu" class="md-primary" ls-icon="apptDetail" ls-icon-label="Detail"></md-button>
+        <md-divider></md-divider>
+        <md-button ls-show-btn="tasks" ls-group="appointment-menu" class="ls-active md-primary" ls-icon="task" ls-icon-label="Tasks"></md-button>
+        <md-button ls-show-btn="notes" ls-group="appointment-menu" class="ls-active md-primary" ls-icon="note" ls-icon-label="Notes"></md-button>
+        <md-button ls-show-btn="files" ls-group="appointment-menu" class="ls-active md-primary" ls-icon="file" ls-icon-label="Files"></md-button>
+    </div>
+    <div flex>
+        <div appointment-id="1a5f53e9-2843-56a0-9d51-a994f170b05d" ls-show-item="tasks" ls-group="appointment-menu" ls-tasks>tasks</div>
+        <div appointment-id="1a5f53e9-2843-56a0-9d51-a994f170b05d" ls-show-item="notes" ls-group="appointment-menu" class="ls-hidden">notes</div>
+        <div appointment-id="1a5f53e9-2843-56a0-9d51-a994f170b05d" ls-show-item="files" ls-group="appointment-menu" class="ls-hidden">files</div>
+        <div appointment-id="1a5f53e9-2843-56a0-9d51-a994f170b05d" ls-show-item="detail" ls-group="appointment-menu"  class="ls-hidden">detail</div>
+    </div>
+</md-card>

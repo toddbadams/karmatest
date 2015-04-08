@@ -1,0 +1,88 @@
+﻿.ls-horz-day {
+    width: 100%;
+    height: 50px;
+    margin: 0px auto;
+}
+.ls-horz-day h3 {
+    margin: 0 0 0 80px;
+    padding: 0;
+}
+.ls-horz-day .ls-appt h2, .ls-horz-day .ls-appt p {
+    margin: 0 0 0 80px;
+    padding: 0;
+}
+.ls-hour-marker {
+    border-left: solid 1px #bbb;
+}
+.ls-half-hour-marker {
+    border-left: dashed 1px #bbb;
+}
+.ls-scheduler-day-vertical {} .ls-scheduler-day-vertical button {
+    text-align: left;
+    font-size: 0.5em;
+    height: 20px;
+    border-radius: 0px !important;
+    color: rgb(207, 216, 220) !important;
+}
+.ls-scheduler-day-vertical button:hover {
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+.ls-scheduler-day-vertical .ls-hour {
+    border-top: 1px solid #B0BEC5;
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+.ls-scheduler-day-vertical .ls-halfhour {
+    border-top: 1px dashed #B0BEC5;
+}
+.ls-quarterhours {
+    background-color: #CFD8DC;
+}
+.ls-quarterhours span {
+    height: 30px;
+    width: 20px;
+    display: inline-block;
+}
+.ls-appt {
+    background-color: #4CAF50;
+}
+.slider {
+    overflow-x: hidden;
+}
+.holder {
+    width: 300%;
+}
+button.ls-hour {
+    text-align: left;
+    font-size: 0.75em;
+    border-radius: 0px !important;
+    color: #616161 !important;
+    border-left: 1px solid #B0BEC5 !important;
+    padding: 0 3px;
+    width: 80px;
+}
+.ls-appt.ls-hold, .ls-quarter-hour.ls-hold {
+    background-color: #4CAF50;
+}
+.ls-appt.ls-scheduled, .ls-quarter-hour.ls-scheduled {
+    background-color: #4CAF50;
+}
+.ls-appt.ls-onroute, .ls-quarter-hour.ls-onroute {
+    background-color: #FDD835;
+}
+.ls-appt.ls-inprogress, .ls-quarter-hour.ls-inprogress {
+    background-color: #F44336;
+}
+.ls-appt.ls-completed, .ls-quarter-hour.ls-completed {
+    background-color: #1E88E5;
+}
+.ls-appt.ls-paused, .ls-quarter-hour.ls-paused {
+    background-color: #FDD835;
+}
+.ls-scheduler-day-vertical .ls-quarter-hour {
+    display: block;
+    background-color: #CFD8DC;
+    font-size: 12px;
+    color: #616161 !important;
+    height: 18px;
+    border-top: 1px dashed #B0BEC5;;
+}

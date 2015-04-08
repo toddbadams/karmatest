@@ -1,0 +1,11 @@
+﻿<md-item class="ls-appointment-note">
+    <md-item-content class="{{ngModel.$modelValue.color}}"
+        ng-class="{'ls-disabled':disabled}">
+        <div class="md-tile-content">
+            <p>{{ngModel.$modelValue.note}}</p>
+            <p class="ls-status">{{ngModel.$modelValue.status}}</p>
+        </div>
+        <ls-note-action-menu></ls-note-action-menu>
+    </md-item-content>
+    <md-divider ng-if="!$last"></md-divider>
+</md-item>

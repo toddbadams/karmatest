@@ -1,0 +1,7 @@
+<div layout="column" ng-style="{display: (isOpen && 'block') || 'none', top: position.top+'px', left: position.left+'px'}" ng-keydown="keydown($event)">
+    <div ng-transclude></div>
+    <div layout="row">
+        <md-button flex ng-click="select('today')">{{ getText('current') }}</md-button>
+        <md-button flex type="button" ng-click="close()">{{ getText('close') }}</md-button>
+    </div>
+</div>

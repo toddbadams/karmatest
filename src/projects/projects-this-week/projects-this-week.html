@@ -1,0 +1,8 @@
+﻿<md-list layout="column">
+    <md-item data-ng-repeat="project in model.list">
+        <md-item-content>
+            <div class="md-tile-left">{{project.title}}</div>
+            <div class="md-tile-content"><span>{{project.billedHours}} of {{project.estimatedHours}}</span></div>
+        </md-item-content>
+    </md-item>
+</md-list>

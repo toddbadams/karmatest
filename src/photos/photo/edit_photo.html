@@ -1,0 +1,35 @@
+﻿<md-item class="ls-appointment-note">
+    <md-item-content>
+        <div class="md-tile-content">
+            <form name="noteForm">
+                <md-input-container>
+                    <label>Description</label>
+                    <textarea ng-model="ngModel.$modelValue.editDescription" name="description" required columns="1" md-maxlength="512" style="width: 100%;"></textarea>
+                    <div ng-messages="noteForm.description.$error">
+                        <div ng-message="required">The note description is required.</div>
+                        <div ng-message="md-maxlength">Please shorten your note description.</div>
+                    </div>
+                </md-input-container>
+            </form>
+        </div>
+        <div class="md-tile-right ls-appointment-note-menu" style="width: 180px;">
+            <md-list layout="row" layout-align="center center" style="height:100%;">
+                <md-item ng-show="!updating">
+                    <md-button aria-label="click to save changes" ng-click="saveEditExpense()" ng-disabled="noteForm.$invalid">
+                        <md-icon icon="/images/check.svg" style="width: 24px; height: 24px;"></md-icon>
+                        <span>done</span>
+                    </md-button>
+                </md-item>
+                <md-item ng-show="!updating">
+                    <md-button aria-label="click to cancel" ng-click="cancelEditExpense()">
+                        <md-icon icon="/images/delete.svg" style="width: 24px; height: 24px;"></md-icon>
+                        <span>cancel</span>
+                    </md-button>
+                </md-item>
+                <md-item ng-show="updating">
+                    <md-progress-circular md-diameter="24" md-mode="indeterminate"></md-progress-circular>
+                </md-item>
+            </md-list>
+        </div>
+    </md-item-content>
+</md-item>

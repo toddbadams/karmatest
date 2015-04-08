@@ -1,0 +1,39 @@
+.ls-action-menu {
+}
+.ls-action-menu.ls-closed {
+    display: none;
+}
+.ls-action-menu md-list {
+    padding: 0;
+    height: 100%;
+}
+.ls-action-menu md-item {
+    padding: 0;
+    margin: 0 5px;
+    text-align: center;
+}
+.ls-action-menu button {
+    width: 90px;
+    height: 100%;
+}
+.ls-action-menu button span {
+    display: block;
+}
+.ls-red svg {
+    fill: red;
+}
+.ls-red {
+    color: red;
+}
+.ls-green svg {
+    fill: green;
+}
+.ls-green {
+    color: green;
+}
+.ls-blue svg {
+    fill: blue;
+}
+.ls-blue {
+    color: blue;
+}

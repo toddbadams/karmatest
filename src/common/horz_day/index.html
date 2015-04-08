@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html data-ng-app="ls">
+
+<head>
+    <title>Scheduler</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
+
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="/src/common/basecss/base.css">
+    <link rel="stylesheet" href="/src/common/horz_day/horz_day.css">
+    <style>
+    .container {
+        margin: 20px;
+
+    }
+    </style>
+</head>
+
+<body  md-theme="alt">
+    <div ng-controller="test" class="container">
+        <ls-horz-day></ls-horz-day>
+    </div>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="/bower_components/ng-messages/angular-messages.js"></script>
+    <script src="/bower_components/hammerjs/hammer.js"></script>
+    <script src="/bower_components/moment/min/moment.min.js"></script>
+    <script src="/bower_components/chance/chance.js"></script>
+    <script>
+    angular.module('ls', ['ngMaterial', 'ngMessages']).
+    controller('test', testController);
+
+    testController.$inject = ['$scope'];
+
+    function testController($scope) {
+        $scope.hours = ['08:00 AM','09:00 AM','10:00 AM','11:00 AM','12:00 PM','01:00 PM','02:00 PM','03:00 PM',
+            '04:00 PM','05:00 PM'];
+
+        $scope.quarters = [
+        'ls-half-hour-marker md-accent md-hue-1',' md-accent md-hue-1','ls-hour-marker  md-accent md-hue-1',' md-accent md-hue-1',
+        'ls-half-hour-marker','','ls-hour-marker','',
+        'ls-half-hour-marker','','ls-hour-marker','',
+        'ls-half-hour-marker','','ls-hour-marker','',
+        'ls-half-hour-marker ', 'md-raised md-warn md-hue-2', 'ls-hour-marker md-raised md-warn md-hue-2', 'md-raised md-warn md-hue-2',
+        'ls-half-hour-marker md-raised md-warn md-hue-2', 'md-raised md-warn md-hue-2', 'ls-hour-marker md-raised md-warn md-hue-2', 'md-raised md-warn md-hue-2',
+        'ls-half-hour-marker md-raised md-warn md-hue-2', 'md-raised md-warn md-hue-2', 'ls-hour-marker md-raised md-warn md-hue-2', 'md-raised md-warn md-hue-2',
+        'ls-half-hour-marker','','ls-hour-marker ','',
+        'ls-half-hour-marker','','ls-hour-marker','',
+        'ls-half-hour-marker','','ls-hour-marker',''
+        ];
+        $scope.appointment = {
+            title : 'Install Home Cinema',
+            status: 'on route'
+        };
+
+
+    }
+    </script>
+    <script src="/src/app-theme.js"></script>
+    <script src="/src/common/models/models_base-service.js"></script>
+    <script src="/src/common/models/models_date-service.js"></script>
+    <script src="/src/common/horz_day/horz_day-directive.js"></script>
+</body>
+
+</html>

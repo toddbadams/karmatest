@@ -1,0 +1,17 @@
+<div class="ls-scheduler-day-vertical" style="position: relative;overflow: hidden; height:960px">
+    <div layout="column" style="position: relative;overflow: hidden;">
+        <md-button flex type="button" ng-click="move(-2)" tabindex="-1" aria-label="previous" style="height: 50px; background-color: white;z-index: 1;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewbox="0 0 95 95">
+                <path d="M94.671,67.894l-1.338,1.486L47.335,27.982L1.337,69.38L0,67.894L47.335,25.29L94.671,67.894z"/>
+            </svg>
+        </md-button>
+        <div style="position:  relative; width: 100%;height: 960px;">
+                <span flex class="ls-quarter-hour" ng-repeat="q in quarters track by $index" class="ls-quarterhour"  ng-class="getStatusCss(q.appt)" ng-click="selectQuarterHour(q)">{{q.label}}</span>
+        </div>
+        <md-button type="button" ng-click="move(2)" tabindex="-1" aria-label="next" style="height: 50px; width: 50px;background-color: white;z-index: 1;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 95 95">
+                <path d="M94.67,26.776L47.335,69.38L0,26.776l1.338-1.486l45.997,41.396l45.997-41.396L94.67,26.776z"/>
+            </svg>
+        </md-button>
+    </div>
+</div>

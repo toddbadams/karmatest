@@ -1,0 +1,29 @@
+﻿<md-item class="ls-appointment-file">
+    <md-item-content>
+        <div class="md-tile-content">
+            <p>{{ngModel.$modelValue.description}}</p>
+            <p class="ls-status">{{ngModel.$modelValue.status}}</p>
+        </div>
+        <md-sidenav class="md-sidenav-right ls-appointment-file-menu" md-component-id="right">
+            <md-list layout="row" layout-align="center center" style="height:100%;">
+                <md-item>
+                    <md-button aria-label="click to edit this file" ng-click="editNote()">
+                        <md-icon icon="/images/file.svg" style="width: 24px; height: 24px;"></md-icon>
+                        <span>edit</span>
+                    </md-button>
+                </md-item>
+                <md-item>
+                    <md-button aria-label="click to delete this file" ng-click="showDeleteConfirm($event)">
+                        <md-icon icon="/images/delete.svg" style="width: 24px; height: 24px;"></md-icon>
+                        <span>delete</span>
+                    </md-button>
+                </md-item>
+            </md-list>
+        </md-sidenav>
+        <div class="md-tile-right">
+            <md-button data-ng-click="openMenu()" aria-label="click to open action menu">
+                <md-icon icon="/images/menu.svg" style="width: 30px; height: 30px;"></md-icon>
+            </md-button>
+        </div>
+    </md-item-content>
+</md-item>

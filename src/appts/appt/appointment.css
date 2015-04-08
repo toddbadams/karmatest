@@ -1,0 +1,56 @@
+﻿.ls-appointment {
+}
+.ls-appointment header {
+  padding-left: 10px;
+}
+.ls-appointment header small {
+	margin: 10px;
+	font-size: 0.5em;
+	color: #9a9a9a;
+	font-weight: 400;
+}
+.ls-appointment .search {
+}
+.ls-appointment .appointment-selection {
+  width: 120px;
+}
+.ls-appointment .appointment-selection.appointment-selection-left {
+  border-right: 1px solid #eaeaea;
+}
+.ls-appointment .appointment-selection.appointment-selection-right {
+  border-left: 1px solid #eaeaea;
+}
+.ls-appointment .appointment-selection .md-button {
+  height: 80px;
+}
+.ls-appointment .appointment-selection .md-button span {
+  display: block;
+  width: 100%;
+}
+.ls-appointment .appointment-view {
+}
+.time {
+
+  text-align: center;
+  font-weight: 400;
+  color: #aaa;
+  margin: 0;
+}
+.appointment-menu {
+  width: 160px;
+  background: #fafafa;
+  border-right: 1px solid #dadada;
+}
+.appointment-menu .md-button  {
+  margin: 0;
+  width: 100%;
+}
+.appointment-menu .md-button span {
+  display: block;
+  margin-bottom: 6px;
+}
+.appointment-menu .md-button svg {
+  margin-top: 6px;
+}
+.appointment-menu  .ls-btn-group {
+}

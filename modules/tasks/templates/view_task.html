@@ -1,0 +1,17 @@
+﻿<md-item class="ls-appointment-task">
+    <md-item-content class="{{ngModel.$modelValue.color}}"
+        ng-class="{'ls-disabled':disabled}">
+        <div class="md-tile-left" style="width: 90px;">
+            <md-checkbox aria-label="Check when completed" ng-show="!updating"
+            data-ng-model="ngModel.$modelValue.completed" ng-click="markAs()"
+            class="md-accent" ng-disabled="disabled"></md-checkbox>
+            <md-progress-circular ng-show="updating" md-diameter="18" md-mode="indeterminate"></md-progress-circular>
+        </div>
+        <div class="md-tile-content">
+            <p>{{ngModel.$modelValue.description}}</p>
+            <p class="ls-status">{{ngModel.$modelValue.status}}</p>
+        </div>
+        <ls-task-action-menu></ls-task-action-menu>
+    </md-item-content>
+    <md-divider ng-if="!$last"></md-divider>
+</md-item>

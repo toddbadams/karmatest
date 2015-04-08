@@ -1,0 +1,9 @@
+﻿<md-content layout="column">
+    <md-input-container layout="row" layout-margin layout-padding>
+        <md-button type="button" class="btn btn-default" ng-click="vm.open($event)" aria-label="open calendar" ng-show="!vm.opened" ls-icon="calendar" ls-icon-size="16"></md-button>
+        <input type="text" datepicker-popup ng-model="vm.selectedDate" availability="vm.getAvialabilityAsync" is-open="vm.opened" ng-required="true" close-text="Close" ng-show="!vm.opened" />
+    </md-input-container>
+    <ls-scheduler ng-show="!vm.opened " mode="day" direction="horizontal" ng-model="vm.appts" date="vm.selectedDateUnix"></ls-scheduler>
+    <ls-appointment ng-show="!vm.opened " style="margin-top: 24px;" ng-model="vm.selectedAppt"></ls-appointment>
+    <ls-scheduler-v style="width: 320px;" ng-show="!vm.opened && false" mode="day" direction="horizontal" ng-model="vm.appts" date="vm.selectedDateUnix"></ls-scheduler-v>
+</md-content>

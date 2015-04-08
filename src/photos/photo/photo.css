@@ -1,0 +1,29 @@
+﻿.ls-appointment-expense .md-tile-content p {
+    font-size: 1.0em;
+}
+.ls-appointment-expense .md-tile-content p.ls-status {
+    font-size: 0.8em;
+    font-style: italic;
+    color: blue;
+}
+.ls-appointment-expense md-item-content {
+    border-bottom: 1px solid #dadada;
+    background-color: #FFFAFA;
+}
+.ls-appointment-expense md-item-content.complete {
+    background-color: #FAFFFA;
+}
+.ls-appointment-expense-menu md-item {
+    width: 90px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+.ls-appointment-expense-menu  {
+}
+.ls-appointment-expense-menu button {
+}
+.ls-appointment-expense-menu button span {
+    width: 100%;
+    display: block;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html data-ng-app="ls">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
+    <link rel="stylesheet" href="/material/dist/angular-material.css">
+    <link rel="stylesheet" href="/src/common/tile/tile.css">
+    <link rel="stylesheet" href="/src/projects/project_summary/project_summary.css">
+</head>
+
+<body data-ng-controller="test as vm">
+
+    <md-content layout="row" layout-padding layout-fill>
+        <!--<ls-tile-grid tiles="vm.projects" tile="ls-project-summary" detail="ls-project-detail" detail-height="500"></ls-tile-grid>-->
+        <md-card flex>
+            <md-list class="ls-tile-grid">
+                <md-item data-ng-repeat="item in vm.projects">
+                    <md-item-content class="ls-project-summary">
+                        <div class="ls-date">{{::item.date | date}}</div>
+                        <div class="ls-code">{{::item.code}}</div>
+                        <div class="ls-name">{{::item.name}}</div>
+                    </md-item-content>
+                </md-item>
+            </md-list>
+        </md-card>
+    </md-content>
+    <script src="/bower_components/hammerjs/hammer.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/material/dist/angular-material.js"></script>
+    <script>
+    (function(angular) {
+        'use strict';
+        angular.module('ls', ['ngMaterial'])
+            .controller('test', controller);
+        controller.$inject = [];
+
+        function controller() {
+            var vm = this;
+            vm.projects = [];
+            for (var _i = 0; _i < 40; _i += 1) {
+                vm.projects.push({
+                    date: new Date(),
+                    code: '#143',
+                    name: 'Install Home Theater',
+                    detail: 'some extra detail'
+                });
+            }
+
+        }
+    })(angular);
+    </script>
+    <script src="/src/common/tile/tile_service.js"></script>
+    <script src="/src/common/tile/tile_grid-directive.js"></script>
+    <script src="/src/projects/project_summary/project_summary-directive.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<div class="ls-panel md-card">
+    <div class="header">
+        <h2>Panel Title</h2>
+    </div>
+    <div class="content" data-ng-transclude></div>
+</div>
+
+
+
+<div class="ls-panel md-card">
+    <ls-panel-header class="header">
+        <h2>{{::title}}</h2>
+        <ls-menu flex>
+            <ls-menu-item icon="menu">
+                <ls-submenu-item label="Edit" icon="note"></ls-submenu-item>
+                <ls-submenu-item label="Delete" icon="delete"></ls-submenu-item>
+            </ls-menu-item>
+        </ls-menu>
+    </div>
+    <div class="content" data-ng-transclude>
+        <h3>Time:</h3>
+        <md-slider md-discrete ng-model="rating" step="8" min="6" max="18" aria-label="rating">
+        </md-slider>
+    </div>
+</div>

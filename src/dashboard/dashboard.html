@@ -1,0 +1,27 @@
+﻿<section layout="row" flex>
+    <div layout="column" flex>
+        <div layout="row" flex>
+            <md-card flex="50">
+                <subheader>Appointments</subheader>
+                <ls-appointments-overview ls-appointments-get-overview data-ng-model="dashboard.appointments.overview" />
+                <md-button class="md-raised" ls-add-appointment>Add Appointment</md-button>
+                <md-button class="md-raised" ls-manage-appointments>Manage Appointment</md-button>
+            </md-card>
+            <md-card flex>
+                <subheader>Appointment Locations</subheader>
+                <ls-appointments-locations ls-appointments-get-locations data-ng-model="dashboard.appointments.locations" />
+            </md-card>
+        </div>
+        <md-card layout="column" flex ls-this-weeks-projects>
+            <subheader>This weeks projects</subheader>
+            <ls-projects-this-week ls-projects-get-thisweek data-ng-model="dashboard.projects.thisWeek" />
+            <md-button class="md-raised" ls-add-appointment>Add Appointment</md-button>
+            <md-button class="md-raised" ls-add-project>Add Project</md-button>
+        </md-card>
+    </div>
+    <div layout="column" flex="33">
+        <md-card>
+            <ls-testimonials ls-users-get-tesimontials="3" data-ng-model="dashboard.users.testimonials" />
+        </md-card>
+    </div>
+</section>

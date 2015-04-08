@@ -1,0 +1,64 @@
+.ls-schedule-day {
+  border-radius: 2px;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border: 1px solid #eaeaea;
+background: rgba(255, 224, 27, 0.075);
+    width: 239px;
+    display: block;
+}
+
+.ls-schedule-day line.ls-hour {
+  stroke: #dadada;
+  stroke-width: 1;
+}
+.ls-schedule-day line.ls-halfhour {
+  stroke: #dadada;
+  stroke-width: 1;
+  stroke-dasharray: 5, 5
+}
+.ls-schedule-day text {
+ font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+.ls-schedule-day rect.ls-appointment-current {
+  fill-opacity: 0.25;
+  fill:#36A646;
+  stroke:#36A646;
+  stroke-width: 1;
+}
+.ls-schedule-day rect.ls-appointment {
+  fill-opacity: 0.25;
+  fill:#F25252;
+}
+circle.ls-appointment-start {
+  fill-opacity: 0.90;
+  fill:#36A646;
+  stroke:#36A646;
+  stroke-width: 2;
+  z-index: 1;
+}
+circle.ls-appointment-end {
+  fill-opacity: 0.90;
+  fill:#36A646;
+  stroke:#36A646;
+  stroke-width: 2;
+  z-index: 1;
+}
+
+circle.ls-appointment-end.active{
+-webkit-transform: scale(1.5);
+transform: scale(1.5);
+-webkit-transition: all 0.1s linear;
+transition: all 0.1s linear;
+
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html data-ng-app="ls">
+
+<head>
+    <title>Scheduler</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
+
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="/src/notes/note/note.css">
+</head>
+
+<body>
+    <div ng-controller="test">
+        <ls-note ng-repeat="mynote in mynotes" ng-model="mynote"></ls-note>
+    </div>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="/bower_components/ng-messages/angular-messages.js"></script>
+    <script src="/bower_components/hammerjs/hammer.js"></script>
+    <script src="/bower_components/moment/min/moment.min.js"></script>
+    <script>
+    angular.module('ls', ['ngMaterial', 'ngMessages']).
+    controller('test', testController);
+
+    testController.$inject = ['$scope', '$q', '$timeout', 'lsNoteModel'];
+
+    function testController($scope, $q, $timeout, lsNoteModel) {
+        // create a note
+        var _entered = 1944000, // jan 23 1970 12:00:00
+            _enteredBy = 'Harry Dude',
+            // create a note
+            _note = lsNoteModel.create(_entered, _enteredBy);
+        _note.description = '512 chacter notoe. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend accumsan nulla, quis tincidunt urna ullamcorper et. Nulla nec nulla lacus. Sed sem nibh, finibus interdum vulputate eu, molestie non purus. Interdums et malesuada fames ac antedolor est,  ipsum primis in faucibus. Nunc varius rutrum euismod. Integer dignissim, ipsum vel lacinia placerat, tortor enim imperdiet velit, eu feugiat eu feugiat leo lectus et arcu. Morbi dolor est, porttitor nec neque quis, ultricies rutrums.';
+        _note.editDescription = _note.description;
+        _note.id = 'foo123412';
+
+        _note.updateDescriptionAsync = function() {
+            var deferred = $q.defer();
+            _note.status = 'updating note description';
+            $timeout(function() {
+                _note.setDescription();
+                deferred.resolve();
+            }, 1200);
+            return deferred.promise;
+        };
+
+        _note.deleteAsync = function() {
+            var deferred = $q.defer();
+            _note.status = 'deleting this note';
+            $timeout(function() {
+                $scope.mynotes.length = 0;
+                deferred.resolve();
+            }, 900);
+            return deferred.promise;
+        };
+
+        $scope.mynotes = [_note];
+    }
+    </script>
+    <script src="/src/common/models/models_base-service.js"></script>
+    <script src="/src/common/models/models_date-service.js"></script>
+    <script src="/src/notes/note/note_model_factory.js"></script>
+    <script src="/src/notes/note/note-directive.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html data-ng-app="ls">
+
+<head>
+    <title>Scheduler</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
+
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/src/common/schedule_day/schedule_day.css">
+</head>
+
+<body data-ng-controller="lsscheddaytest as vm">
+
+
+    <section layout="row" layout-margin layout-fill layout-padding>
+        <ls-schedule-day flex="25" appointments="vm.appointments"></ls-schedule-day>
+        <ls-schedule-day flex appointments="vm.appointments"></ls-schedule-day>
+    </section>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/material/dist/angular-material.js"></script>
+    <script src="/src/devapp.js"></script>
+    <script src="/src/common/schedule/schedule_service.js"></script>
+    <script src="/src/common/schedule_day/schedule_day-directive.js"></script>
+    <script>
+    (function(angular) {
+        'use strict';
+        angular.module('ls')
+            .controller('lsscheddaytest', controller);
+        controller.$inject = [];
+
+        function controller() {
+            var vm = this;
+            vm.appointments = [{
+                start: 1421573400,
+                length: 7200,
+                isSelected: true,
+            }, {
+                start: 1421586000,
+                length: 7200,
+                isSelected: false,
+            }, {
+                start: 1421593200,
+                length: 7200,
+                isSelected: false,
+            }];
+        }
+    })(angular);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+.ls-tile-grid{
+
+}
+.ls-tile-grid md-item {
+  display:block;
+  width: 160px;
+  height: 160px;
+  float: left;
+  border: 1px solid #eaeaea;
+}

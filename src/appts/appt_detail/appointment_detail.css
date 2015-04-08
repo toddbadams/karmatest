@@ -1,0 +1,10 @@
+﻿.time {
+
+  text-align: center;
+  font-weight: 400;
+  color: #aaa;
+  margin: 0;
+}
+.ls-appointment-detail {
+   border-top: 1px solid #eaeaea;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html data-ng-app="ls">
+
+<head>
+    <title>Scheduler</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
+
+    <link rel="stylesheet" href="/material/dist/angular-material.css">
+</head>
+
+<body style="padding-top:25px;">
+    <md-content layout="row" layout-padding data-ng-controller="test as vm">
+        <div flex="15"></div>
+        <div flex layout="column" layout-padding>
+            <md-card flex layout="row">
+                <md-checkbox ng-model="vm.isChecked" aria-label="Finished?">
+                    Finished ?
+                </md-checkbox>
+                <md-checkbox md-no-ink ng-model="vm.hasInk" aria-label="No Ink Effects">
+                    No Ink Effects
+                </md-checkbox>
+                <md-checkbox ng-disabled="true" ng-model="vm.isDisabled" aria-label="Disabled">
+                    Disabled
+                </md-checkbox>
+            </md-card>
+            <p>how do I put space here?</p>
+            <md-card>
+                <md-tabs>
+                    <md-tab label="one" layout="row">
+                        <p style="margin:10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt nisl vel ipsum sagittis, ut pulvinar orci elementum. Integer lacinia tincidunt porttitor. Nulla in nibh consectetur, suscipit ipsum a, consequat libero. Nullam vel arcu ultricies, placerat mi ac, porttitor justo. Donec vitae porta felis, id sagittis nunc. Sed vel justo sit amet nisi malesuada accumsan. </p>
+                    </md-tab>
+                    <md-tab label="two">Nulla consectetur dictum nunc a suscipit. Donec eu erat convallis, lobortis nunc sed, dignissim orci. Nulla sed risus vel sapien tincidunt pharetra. Nulla mollis, nisi id sodales aliquam, dolor nisl congue sem, et porttitor quam sem quis lectus. Nullam consequat leo in augue molestie imperdiet. </md-tab>
+                    <md-tab label="three">Fusce ac neque vitae nulla ornare accumsan vel vel est. Mauris at lacinia velit, nec tempor tellus. Vestibulum suscipit magna vulputate ligula commodo, at sagittis tellus gravida. Nam non nunc nibh. Duis massa tellus, dapibus et libero nec, imperdiet elementum urna. Nunc mattis porta turpis, at congue nunc posuere vitae. </md-tab>
+                </md-tabs>
+            </md-card>
+        </div>
+        <div flex="15"></div>
+    </md-content>
+
+    <script src="/bower_components/hammerjs/hammer.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/material/dist/angular-material.js"></script>
+    <script>
+    (function(angular) {
+        'use strict';
+        angular.module('ls', ['ngMaterial'])
+            .controller('test', controller);
+        controller.$inject = [];
+
+        function controller() {
+            var vm = this;
+            vm.isChecked = false;
+            vm.hasInk = true;
+            vm.isDisabled = true;
+            return vm;
+        }
+    })(angular);
+    </script>
+</body>
+
+</html>

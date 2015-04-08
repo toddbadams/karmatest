@@ -1,0 +1,9 @@
+﻿<md-input-container>
+    <label>{{::label}}</label>
+    <textarea ng-model="ngModel.$modelValue" name="txt" columns="1"
+    ls-form-on-esc="cancel" ls-form-on-return="save"></textarea>
+    <ng-messages for="ngModel.$modelValue">
+        <ng-message when="ngModel.$modelValue.length<1">The task description is required.</ng-message>
+        <ng-message when="ngModel.$modelValue.length>maxLength">Please shorten your task description.</ng-message>
+    </ng-messages>
+</md-input-container>

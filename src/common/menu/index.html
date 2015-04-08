@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="ls">
+<head>
+    <title>Scheduler</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/src/common/menu/menu.css">
+    <link rel="stylesheet" href="/src/common/icons/icons.css">
+     <link rel="stylesheet" href="/src/common/animate/animations.css">
+</head>
+<body style="padding: 24px;">
+    <md-content layout="row">
+        <div flex="25"></div>
+        <ls-menu flex>
+            <ls-menu-item label="Customer Contact" icon="phone">
+                    <ls-submenu-item label="Send SMS update" icon="sms"></ls-submenu-item>
+                    <ls-submenu-item label="Send email update" icon="email"></ls-submenu-item>
+                    <ls-submenu-item label="(604) 555 - 1212" icon="phone"></ls-submenu-item>
+            </ls-menu-item>
+            <ls-menu-item label="Status" icon="status">
+                    <ls-submenu-item label="On route" icon="onroute"></ls-submenu-item>
+                    <ls-submenu-item label="Start" icon="start"></ls-submenu-item>
+                    <ls-submenu-item label="Complete" icon="complete"></ls-submenu-item>
+                    <ls-submenu-item label="Place on hold" icon="hold"></ls-submenu-item>
+            </ls-menu-item>
+            <ls-menu-item label="Tracking" icon="alarm">
+                    <ls-submenu-item label="Email to Fred..." icon="email"></ls-submenu-item>
+            </ls-menu-item>
+        </ls-menu>
+        <div flex="25"></div>
+    </md-content>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/material/dist/angular-material.js"></script>
+    <script src="/src/devapp.js"></script>
+    <script src="/src/common/menu/menu-directive.js"></script>
+    <script src="/src/common/menu/menu_item-directive.js"></script>
+    <script src="/src/common/menu/submenu-directive.js"></script>
+    <script src="/src/common/menu/submenu_item-directive.js"></script>
+</body>
+
+</html>

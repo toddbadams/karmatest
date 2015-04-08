@@ -1,0 +1,23 @@
+﻿.ls-nav {} .ls-nav .brand-primary {
+    color: #fff;
+    fill: #333;
+}
+.ls-nav .brand-accent {
+    color: #000;
+    fill: #000;
+}
+.ls-nav .navbar-main a {
+    margin-right: 20px;
+}
+.ls-nav small {
+  font-size: 0.5em;
+}
+.ls-nav .profile img {
+  border: 1px solid #565656;
+  border-radius: 50%;
+}
+
+
+.navbar-main a {
+
+}

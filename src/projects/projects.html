@@ -1,0 +1,216 @@
+﻿<section class="md-default-theme ls-projects">
+    <header>
+        <h2>Project Dashboard</h2>
+        <div layout="row" layout-align="center start">
+            <md-button ls-project-add class="md-raised">
+                <md-icon icon="./images/add.svg" style="width: 24px; height: 24px;"></md-icon>Add Project
+            </md-button>
+            <span class="ls-search">
+            <md-input-container flex>
+          <label>search</label>
+          <input ng-model="searchText">
+        </md-input-container>
+            <md-button aria-label="Search">
+                <md-icon icon="./images/search.svg" class="md-raised" style="width: 24px; height: 24px;"></md-icon>
+            </md-button>
+            </span>
+            <input type="text" class="md-raised" date-range-picker ng-model="dates" custom-select-options="rangeSelectOptions" />
+            <md-checkbox ng-model="data.cb1" aria-label="show active projects">
+                active
+            </md-checkbox>
+            <md-checkbox aria-label="show finished projects">
+                finished
+            </md-checkbox>
+        </div>
+    </header>
+    <div class="ls-project-tiles">
+        <md-card data-ng-repeat="project in vm.projectsBefore">
+            <ul>
+                <li>{{project.dateCreated | date : 'mediumDate'}}</li>
+                <li>{{project.code}}</li>
+                <li>{{project.name}}</li>
+            </ul>
+        </md-card>
+        <md-card class="md-default-theme ls-appointment">
+            <header>
+                <h2 class="ls-project-active">{{vm.project.name}}<small>{{vm.project.state}}</small></h2>
+            </header>
+            <div layout="row" layout-margin>
+                <md-card flex="33" layout="column" class="md-default-theme ls-appointment-actions">
+                    <md-subheader>project detail</md-subheader>
+                    <md-input-container flex>
+                        <label>name</label>
+                        <input ng-model="vm.project.name">
+                    </md-input-container>
+                    <md-content>
+                        <md-list>
+                            <md-item>
+                                <md-item-content>
+                                    <span class="md-tile-left">
+                                        Project Number:
+                                    </span>
+                                    <span class="md-tile-content">
+                                        {{vm.project.code}}
+                                    </span>
+                                </md-item-content>
+                            </md-item>
+                            <md-item>
+                                <md-item-content>
+                                    <span class="md-tile-left">
+                                        Date Created
+                                    </span>
+                                    <span class="md-tile-content">
+                                        {{vm.project.dateCreated | date : 'mediumDate'}}
+                                    </span>
+                                </md-item-content>
+                            </md-item>
+                            <md-item>
+                                <md-item-content>
+                                    <span class="md-tile-left">
+                                        Created By:
+                                    </span>
+                                    <span class="md-tile-content">
+                                        {{vm.project.createdBy}}
+                                    </span>
+                                </md-item-content>
+                            </md-item>
+                            <md-item>
+                                <md-item-content>
+                                    <span class="md-tile-left">
+                                        Billable Rate:
+                                    </span>
+                                    <span class="md-tile-content">
+                                        {{vm.project.billRate | currency}} per hour
+                                    </span>
+                                </md-item-content>
+                            </md-item>
+                            <md-item>
+                                <md-item-content>
+                                    <span class="md-tile-left">
+                                        Project Status:
+                                    </span>
+                                    <span class="md-tile-content">
+                                        {{vm.project.state}}
+                                    </span>
+                                </md-item-content>
+                            </md-item>
+                            <md-item>
+                                <md-item-content>
+                                    <span class="md-tile-left">
+                                        Staff:
+                                    </span>
+                                    <span class="md-tile-content">
+                                        Fred, Wilma
+                                    </span>
+                                </md-item-content>
+                            </md-item>
+                            <md-item>
+                                <md-item-content>
+                                    <span class="md-tile-left">
+                                        Total Appointments:
+                                    </span>
+                                    <span class="md-tile-content">
+                                        3 appointment scheduled
+                                    </span>
+                                </md-item-content>
+                            </md-item>
+                        </md-list>
+                    </md-content>
+                </md-card>
+
+
+
+                <md-card flex layout="column" class="md-default-theme ls-appointment-actions">
+                    <md-subheader>project overview</md-subheader>
+                    <md-input-container flex>
+                        <label>name</label>
+                        <input ng-model="vm.project.name">
+                    </md-input-container>
+                    <md-content>
+                        <md-list>
+                            <md-item>
+                                <md-item-content>
+                                    <p>graphic</p>
+                                </md-item-content>
+                            </md-item>
+                            <md-item>
+                                <md-item-content>
+                                    <span class="md-tile-left">
+                                        Completed Appointments
+                                    </span>
+                                    <span class="md-tile-content">
+                                        {{vm.project.dateCreated | date : 'mediumDate'}}
+                                    </span>
+                                </md-item-content>
+                            </md-item>
+                            <md-item>
+                                <md-item-content>
+                                    <span class="md-tile-left">
+                                        Scheduled Appointments:
+                                    </span>
+                                    <span class="md-tile-content">
+                                        {{vm.project.createdBy}}
+                                    </span>
+                                </md-item-content>
+                            </md-item>
+                        </md-list>
+                    </md-content>
+                </md-card>
+
+
+                <md-card flex="33" layout="column" class="md-default-theme ls-appointment-actions">
+                    <md-subheader>client detail</md-subheader>
+                    <md-content>
+                        <md-list>
+                            <md-item>
+                                <md-item-content>
+                                    <span class="md-tile-left">
+                                        Client Contact:
+                                    </span>
+                                    <span class="md-tile-content">
+                                        {{vm.project.code}}
+                                    </span>
+                                </md-item-content>
+                            </md-item>
+                            <md-item>
+                                <md-item-content>
+                                    <span class="md-tile-left">
+                                        Client Phone number
+                                    </span>
+                                    <span class="md-tile-content">
+                                        {{vm.project.dateCreated | date : 'mediumDate'}}
+                                    </span>
+                                </md-item-content>
+                            </md-item>
+                            <md-item>
+                                <md-item-content>
+                                    <span class="md-tile-left">
+                                        Site Location:
+                                    </span>
+                                    <span class="md-tile-content">
+                                        {{vm.project.createdBy}}
+                                    </span>
+                                </md-item-content>
+                            </md-item>
+                        </md-list>
+                    </md-content>
+                </md-card>
+            </div>
+            <md-card layout="row" layout-margin class="lists">
+                <md-tabs>
+                    <md-tab label="Tasks"></md-tab>
+                    <md-tab label="Notes"></md-tab>
+                    <md-tab label="Photos and Files"></md-tab>
+                    <md-tab label="Expenses"></md-tab>
+                </md-tabs>
+            </md-card>
+        </md-card>
+        <md-card data-ng-repeat="project in vm.projectsAfter">
+            <ul>
+                <li>{{project.dateCreated | date : 'mediumDate'}}</li>
+                <li>{{project.code}}</li>
+                <li>{{project.name}}</li>
+            </ul>
+        </md-card>
+    </div>
+</section>

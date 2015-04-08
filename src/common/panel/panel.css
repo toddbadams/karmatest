@@ -1,0 +1,57 @@
+﻿.ls-panel {
+
+}
+.ls-panel header {
+    color: rgba(0, 0, 0, 0.54);
+    background-color: #ffffff;
+    transition: 0.2s ease-out margin;
+    display: block;
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 1em;
+    padding: 16px 0px 16px 16px;
+    margin: 0 0 0 0;
+    position: relative;
+    border-bottom: 1px solid #dadada;
+    border-top: 1px solid #fafafa;
+    border-right: 1px solid #fafafa;
+    border-left: 1px solid #fafafa;
+}
+.ls-panel header h2 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #333;
+    margin: 0;
+    float: left;
+}
+.ls-content {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #333;
+    float: left;
+    width: 80%;
+}
+.ls-panel header .ls-menu {
+    list-style: none;
+    padding: 0;
+    float: right;
+}
+.ls-panel header .ls-menu li {
+    padding: 3px;
+    cursor: pointer;
+}
+.ls-panel header .ls-menu li .ls-submenu {
+    padding: 0 0 0 24px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #fff;
+    width: 100%;
+    overflow: hidden;
+}
+.ls-panel header .ls-menu li .ls-submenu.ng-hide-add {
+    -webkit-animation: 0.5s slideOutUp ease;
+    animation: 0.5s slideOutUp ease;
+}
+.ls-panel header .ls-menu li .ls-submenu.ng-hide-remove {
+    -webkit-animation: 0.5s slideInDown ease;
+    animation: 0.5s slideInDown ease;
+}

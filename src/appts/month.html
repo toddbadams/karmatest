@@ -1,0 +1,21 @@
+<div layout="column">
+    <div layout="row">
+
+        <md-button type="button" class="pull-left" ng-click="move(-1)" tabindex="-1" aria-label="previous">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 64 64">
+                <polygon fill="#231F20" points="45.463,59.579 17.066,31.999 45.463,4.421 46.934,5.935 20.099,31.999 46.934,58.064   " />
+            </svg>
+        </md-button>
+        <md-button flex id="{{uniqueId}}-title" role="heading" aria-live="assertive" aria-atomic="true" type="button" ng-click="toggleMode()" tabindex="-1" style="width:100%;"><strong>{{title}}</strong>
+        </md-button>
+        <md-button type="button" ng-click="move(1)" tabindex="-1" aria-label="next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 64 64">
+                <polygon points="16.764,63.213 15.1,61.498 45.473,32.001 15.1,2.499 16.764,0.787 48.9,32.001   " />
+            </svg>
+        </md-button>
+    </div>
+    <div layout="row" ng-repeat="row in rows track by $index">
+        <md-button flex ng-repeat="dt in row track by dt.date" aria-disabled="{{!!dt.disabled}}" type="button" ng-class="{'md-primary': dt.selected, 'md-primary': isActive(dt)}" ng-click="select(dt.date)" ng-disabled="dt.disabled" tabindex="-1"><span ng-class="{'text-info': dt.current}">{{dt.label}}</span>
+        </md-button>
+    </div>
+</div>

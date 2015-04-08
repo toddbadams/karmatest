@@ -1,0 +1,11 @@
+﻿.ls-project-location {
+}
+.ls-project-location  .map{
+  min-height:  380px;
+}
+.ls-project-location  .address {
+  text-align: center;
+  font-weight: 400;
+  color: #aaa;
+  margin: 0;
+}

@@ -1,0 +1,33 @@
+﻿<md-item class="ls-appointment-note">
+    <md-item-content class="ls-add-item">
+        <div class="md-tile-content">
+            <form name="addNoteForm">
+                <md-input-container>
+                    <label>Add a new note</label>
+                    <textarea ng-model="description" name="description" columns="1" md-maxlength="512"></textarea>
+                    <div ng-messages="addNoteForm.description.$error">
+                        <div ng-message="md-maxlength">Please shorten your note description.</div>
+                    </div>
+                </md-input-container>
+            </form>
+        </div>
+        <div class="md-tile-right ls-action-menu" style="width: 180px;">
+            <md-list layout="row" layout-align="center center">
+                <md-item ng-show="showClear()">
+                    <md-button aria-label="click to clear" ng-click="clear()" class="md-default">
+                        <span>clear</span>
+                    </md-button>
+                </md-item>
+                <md-item ng-show="showAdd()">
+                    <md-button aria-label="click to add" ng-click="add()" class="md-primary">
+                        <span>add</span>
+                    </md-button>
+                </md-item>
+                <md-item ng-show="adding">
+                    <md-progress-circular md-diameter="24" md-mode="indeterminate"></md-progress-circular>
+                </md-item>
+            </md-list>
+        </div>
+    </md-item-content>
+    <md-divider ng-if="!$last"></md-divider>
+</md-item>

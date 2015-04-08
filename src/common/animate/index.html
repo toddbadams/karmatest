@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html data-ng-app="ls">
+
+<head>
+    <title>Scheduler</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
+
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/src/common/icons/icons.css">
+    <link rel="stylesheet" href="/src/common/animate/animations.css">
+</head>
+
+<body>
+    <md-content layout="row">
+        <div flex="25"></div>
+        <div flex>
+            <ul style="list-style:none">
+                <li><span class="ls-icon ls-icon-add animated slideInDown"></span><span>add</span></li>
+                <li><span class="ls-icon ls-icon-alarm animated bounce"></span><span>alarm</span></li>
+                <li><span class="ls-icon ls-icon-all animated flash"></span><span>all</span></li>
+                <li><span class="ls-icon ls-icon-calendar animated shake"></span><span>calendar</span></li>
+                <li><span class="ls-icon ls-icon-check animated flipInX"></span><span>check</span></li>
+                <li><span class="ls-icon ls-icon-complete animated flipOutX"></span><span>complete</span></li>
+                <li><span class="ls-icon ls-icon-delete animated slideInUp"></span><span>delete</span></li>
+            </ul>
+        </div>
+        <div flex="25"></div>
+    </md-content>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/material/dist/angular-material.js"></script>
+    <script src="/src/devapp.js"></script>
+    <script src="/src/common/menu/menu-directive.js"></script>
+    <script src="/src/common/menu/menu_item-directive.js"></script>
+    <script src="/src/common/menu/submenu-directive.js"></script>
+    <script src="/src/common/menu/submenu_item-directive.js"></script>
+    <script src="/src/appointments/appointment_actions/appointment_actions-directive.js"></script>
+</body>
+
+</html>

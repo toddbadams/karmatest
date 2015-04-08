@@ -1,0 +1,14 @@
+/bin
+/bower_components
+/dist
+/docs
+/node_modules
+/obj
+/report
+/hold
+/analysis
+/dev
+/test
+/coverage
+/report.html
+/images
